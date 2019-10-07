@@ -27,8 +27,6 @@ react-native link react-native-text-input-mask
 pod 'InputMask'
 ```
 
-![](https://cdn-images-1.medium.com/max/2000/1*J0TPrRhkAKspVvv-JaZHjA.png)
-
 ### Manual installation
 
 #### iOS
@@ -36,7 +34,9 @@ pod 'InputMask'
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `react-native-text-input-mask` and add `RNTextInputMask.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNTextInputMask.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+4. Add pod dependency to your Podfile: `pod 'InputMask'`
+5. Execute pod install inside your ios folder
+6. Run your project (`Cmd+R`)<
 
 #### Android
 
