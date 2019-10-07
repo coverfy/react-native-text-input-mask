@@ -1,4 +1,5 @@
 # react-native-text-input-mask
+
 Text input mask for React Native on iOS and Android.
 
 <a href="https://www.npmjs.org/package/react-native-text-input-mask">
@@ -20,12 +21,15 @@ npm install --save react-native-text-input-mask
 react-native link react-native-text-input-mask
 ```
 
-**iOS only:** you have to drag and drop `InputMask.framework` to `Embedded Binaries` in General tab of Target
+**iOS only:** you have to add the following line to your Podfile
+
+```
+pod 'InputMask'
+```
 
 ![](https://cdn-images-1.medium.com/max/2000/1*J0TPrRhkAKspVvv-JaZHjA.png)
 
 ### Manual installation
-
 
 #### iOS
 
@@ -37,17 +41,19 @@ react-native link react-native-text-input-mask
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.RNTextInputMask.RNTextInputMaskPackage;` to the imports at the top of the file
-  - Add `new RNTextInputMaskPackage()` to the list returned by the `getPackages()` method
+
+- Add `import com.RNTextInputMask.RNTextInputMaskPackage;` to the imports at the top of the file
+- Add `new RNTextInputMaskPackage()` to the list returned by the `getPackages()` method
+
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-text-input-mask'
-  	project(':react-native-text-input-mask').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-text-input-mask/android')
-  	```
+   ```
+   include ':react-native-text-input-mask'
+   project(':react-native-text-input-mask').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-text-input-mask/android')
+   ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-text-input-mask')
-  	```
+   ```
+     compile project(':react-native-text-input-mask')
+   ```
 
 ## Usage
 
